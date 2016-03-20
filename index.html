@@ -1,9 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-</head>
-<body>
-<iframe width="100%" height="800px" src="https://johannachisholm.maps.arcgis.com/apps/MapJournal/?appid=6a764ebcfb0b4d41a9b879412e46c1be" frameborder="0" scrolling="no"></iframe>
-</body>
+<!doctype html>
+<html lang="en">
+	<title>
+	<head>
+	</head>
+	</title>
+	<body>
+		<h1>Week 8 Homework: Open Refine</h1>
+		<p>Using <a href="https://drive.google.com/a/journalism.cuny.edu/file/d/0B_s4sOV6tHLFeUFMTFpSa3R0eWM/view">the Full Knight Grants Data Set</a> and Open Refine, I was able to clean and analyze this data set to reveal which communities were benefiting the most from the Knight Scholarship Fund.
+		</p>
+		<p><iframe width="100%" height="520" frameborder="0" src="https://johannachisholm.cartodb.com/viz/dd311e14-eede-11e5-8f9e-0ecfd53eb7d3/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+		</p>
+		<p>I first had to clean the data, which required going through the community and grantee location columns to see if the locations were spelt the correct way, and that there were no repeats. This was done using the 'cluster' function on Open Refine, after I had filtered each column by a text facet. 
+		</p>
+		<p>The next part that required cleaning up was the dates for when the grant was awarded, when the grant period began, and when the grant period ended. To clean these three columns up, I first chose to transform them to 'text cells', and then transformed them to 'date cells'. By doing this, the dates would all be consistent and correctly formatted. 
+		</p>
+		<p>I then needed filter the data by the communities that were to be benefited by the Knight Scholarship. To do this, I chose the 'community column' and then faceted it by text. I removed all the blank entries from the data, as those scholarships were ones that were not specifically benefiting a community. 
+		</p>
+		<p>I then needed to get the correct coordinates for the communities for when I exported the sheet for map building on CartoDB. To get the longitude and latitude, I had to connect the location column to a Google maps URL and then use a query to separate the location into latitude and longitude.</p>
+		<p>You can view a copy of the cleaned data sheet <a href="craft216_openrefine_knight_grants-xlsx.html">here.</a>
+		</p>
+	
+	</body>
+	
 </html>
